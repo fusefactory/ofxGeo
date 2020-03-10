@@ -45,10 +45,10 @@ void CoordinateBounds::growToInclude(const Coordinate& coordinate)
         _unset = false;
     }
 
-    _minLatitude = std::min(coordinate.getLatitude(), _minLatitude);
-    _maxLatitude = std::max(coordinate.getLatitude(), _maxLatitude);
-    _minLongitude = std::min(coordinate.getLongitude(), _minLongitude);
-    _maxLongitude = std::max(coordinate.getLongitude(), _maxLongitude);
+    _minLatitude = MIN(coordinate.getLatitude(), _minLatitude);
+    _maxLatitude = MAX(coordinate.getLatitude(), _maxLatitude);
+    _minLongitude = MIN(coordinate.getLongitude(), _minLongitude);
+    _maxLongitude = MAX(coordinate.getLongitude(), _maxLongitude);
 
 }
 
